@@ -6,18 +6,18 @@ import numpy as np
 
 class HandDetector:
     def __init__(
-        self, mode=False, maxhands=2, modelcomplexity=1, detectioncon=0.5, trackcon=0.5
+        self, mode=False, max_hands=2, modelcomplexity=1, detectioncon=0.5, trackcon=0.5
     ):
         self.mode = mode
-        self.maxhands = maxhands
+        self.max_hands = max_hands
         self.detectioncon = detectioncon
         self.trackcon = trackcon
         self.modelcomplex = modelcomplexity
 
         self.mphands = mp.solutions.hands
-        self.hands = self.mphands.hands(
+        self.hands = self.mphands.Hands(
             self.mode,
-            self.maxhands,
+            self.max_hands,
             self.modelcomplex,
             self.detectioncon,
             self.trackcon,
@@ -25,20 +25,20 @@ class HandDetector:
         self.mpdraw = mp.solutions.drawing_utils
         self.tipids = [4, 8, 12, 16, 20]
 
-    def findhands(self, img, draw=True):
-        imgrgb = cv2.cvtcolor(img, cv2.color_bgr2rgb)
+    def find_hands(self, img, draw=True):
+        imgrgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
         self.results = self.hands.process(imgrgb)
 
         if self.results.multi_hand_landmarks:
             for handlms in self.results.multi_hand_landmarks:
                 if draw:
                     self.mpdraw.draw_landmarks(
-                        img, handlms, self.mphands.hand_connections
+                        img, handlms, self.mphands.HAND_CONNECTIONS
                     )
 
         return img
 
-    def findposition(self, img, handno=0, draw=True):
+    def find_position(self, img, handno=0, draw=True):
         xlist = []
         ylist = []
         bbox = []
@@ -52,7 +52,7 @@ class HandDetector:
                 ylist.append(cy)
                 self.lmlist.append([id, cx, cy])
                 if draw:
-                    cv2.circle(img, (cx, cy), 5, (255, 0, 255), cv2.filled)
+                    cv2.circle(img, (cx, cy), 5, (255, 0, 255), cv2.FILLED)
 
             xmin, xmax = min(xlist), max(xlist)
             ymin, ymax = min(ylist), max(ylist)
