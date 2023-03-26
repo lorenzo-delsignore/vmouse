@@ -65,3 +65,24 @@ class HandDetector:
 
         return self.lmlist, bbox
 
+    def fingers_up(self):
+        fingers = []
+
+        if not self.lmlist:
+            return [0, 0, 0, 0]
+
+        # thumb
+        if self.lmlist[self.tipids[0]][1] > self.lmlist[self.tipids[0] - 1][1]:
+            fingers.append(1)
+        else:
+            fingers.append(0)
+
+        # fingers
+        for id in range(1, 5):
+            if self.lmlist[self.tipids[id]][2] < self.lmlist[self.tipids[id] - 2][2]:
+                fingers.append(1)
+            else:
+                fingers.append(0)
+
+        return fingers
+
