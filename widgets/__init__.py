@@ -1,3 +1,1 @@
 from widgets.screens import HandTrackingScreen
-from widgets.tutorial_widget import TutorialWidget
-from widgets.tutorial_widget import TutorialWidget
