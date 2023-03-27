@@ -118,7 +118,6 @@ class HandTrackingScreen(QWidget):
             self.start_tracking()
 
     def quit(self):
-        self.update_gui_timer.stop()
         self.gesture_handler.release()
         cv2.destroyAllWindows()
         self.close()
