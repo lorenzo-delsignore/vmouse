@@ -1,7 +1,7 @@
 # vmouse
 Hand gesture control software that allows you to operate a computer mouse using hand movements and finger gestures.
 
-To run the application run the command:
+To run the application type the command:
 
 ``` python guy.py ```
 
