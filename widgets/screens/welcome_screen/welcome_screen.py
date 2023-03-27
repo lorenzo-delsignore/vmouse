@@ -126,7 +126,6 @@ class WelcomeScreen(QWidget):
 
             QPushButton:hover {
                 background-color: #F58A45;
-                cursor: pointer;
             }
             """
         )

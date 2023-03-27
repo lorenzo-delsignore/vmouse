@@ -98,7 +98,6 @@ class TutorialScreen(QWidget):
 
             QPushButton:hover {
                 background-color: #F58A45;
-                cursor: pointer;
             }
             """
         )
@@ -117,7 +116,6 @@ class TutorialScreen(QWidget):
 
             QPushButton:hover {
                 background-color: #558B2F;
-                cursor: pointer;
             }
             """
         )
