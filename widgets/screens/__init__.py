@@ -1,0 +1,2 @@
+from widgets.screens.welcome_screen.welcome_screen import WelcomeScreen
+from widgets.screens.tutorial_screen.tutorial_screen import TutorialScreen
