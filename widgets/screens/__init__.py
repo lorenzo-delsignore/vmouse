@@ -1,2 +1,3 @@
+from widgets.screens.hand_tracking_screen.hand_tracking_screen import HandTrackingScreen
 from widgets.screens.welcome_screen.welcome_screen import WelcomeScreen
 from widgets.screens.tutorial_screen.tutorial_screen import TutorialScreen
