@@ -5,4 +5,4 @@ To run the application type the command:
 
 ``` python guy.py ```
 
-A tutorial will show at start of the application on how to use the virtual mouse.
+A tutorial on how to use the virtual mouse will show at start of the application.
