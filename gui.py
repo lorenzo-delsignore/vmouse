@@ -75,7 +75,7 @@ class MainWindow(QMainWindow):
         # add tutorial 2
         self.tutorial_screen2 = TutorialScreen(
             title="Click Mouse",
-            description="You can simulate the click of the mouse in the camera raising only the index finger and middle finger in the bounding box displayed in the camera.\nIn particular you can simulate the following features of the mouse:\nLeft click: .....\nRight click:......\nDouble click: .....",
+            description="You can simulate the click of the mouse in the camera raising only the index finger and middle finger in the bounding box displayed in the camera.\nIn particular you can simulate the following features of the mouse:\nLeft click: you can simulate it by bringing your index and middle fingers closer together and moving them apart \nRight click: you can simulate it by holding your index and middle fingers close together\nDouble click:you can simulate it by bringing your index and middle fingers together and moving them away twice",
             image="resources/assets/mouse_click.gif",
             on_continue_clicked=lambda: stacked_layout.setCurrentIndex(0),
             on_skip_clicked=lambda: stacked_layout.setCurrentIndex(0),
