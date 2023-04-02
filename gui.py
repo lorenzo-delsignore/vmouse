@@ -138,7 +138,8 @@ if __name__ == "__main__":
 
     # print(settings.fileName())
     # window.setGeometry(100, 100, 500, 500)  # Set the window's geometry
-    # window.setWindowTitle("My First GUI")  # Set the window's title
+    window.setWindowTitle("Vmouse")  # Set the window's title
+    window.setWindowIcon(QIcon("resources/assets/logo.png"))
 
     # # Create a label widget
     # label = QLabel("Hello World", window)
