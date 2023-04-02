@@ -108,7 +108,7 @@ class MainWindow(QMainWindow):
         if window_state & Qt.WindowMinimized:
             self.setWindowState(window_state & ~Qt.WindowMinimized)
 
-        self.showNormal()
+        self.show()
         self.activateWindow()
 
     def changeEvent(self, event):
