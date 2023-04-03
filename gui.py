@@ -62,7 +62,7 @@ class MainWindow(QMainWindow):
         # add tutorial 1
         self.tutorial_screen = TutorialScreen(
             title="Mouse Movement",
-            description="You can move the cursor mouse in the camera raising only your index finger in the bounding box displayed in the camera.",
+            description="To move the mouse cursor use one hand and raise its index finger in the application's bounding box, which represents your desktop area.",
             image="resources/assets/move_mouse.gif",
             on_continue_clicked=lambda: stacked_layout.setCurrentIndex(
                 stacked_layout.currentIndex() + 1
@@ -74,8 +74,8 @@ class MainWindow(QMainWindow):
 
         # add tutorial 2
         self.tutorial_screen2 = TutorialScreen(
-            title="Click Mouse",
-            description="You can simulate the click of the mouse in the camera raising only the index finger and middle finger in the bounding box displayed in the camera.\nIn particular you can simulate the following features of the mouse:\nLeft click: you can simulate it by bringing your index and middle fingers closer together and moving them apart \nRight click: you can simulate it by holding your index and middle fingers close together\nDouble click:you can simulate it by bringing your index and middle fingers together and moving them away twice",
+            title="Mouse Click",
+            description="To perform a mouse click use one hand and its index and middle fingers. In particular, you can perform the following features of the mouse:\nLeft click: bring your index and middle fingers closer together and move them apart.\nRight click: hold your index and middle fingers close together.\nDouble click: bring your index and middle fingers together and move them apart twice.",
             image="resources/assets/mouse_click.gif",
             on_continue_clicked=lambda: stacked_layout.setCurrentIndex(0),
             on_skip_clicked=lambda: stacked_layout.setCurrentIndex(0),
