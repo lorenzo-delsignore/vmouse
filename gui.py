@@ -75,7 +75,7 @@ class MainWindow(QMainWindow):
         # add tutorial 2
         self.tutorial_screen2 = TutorialScreen(
             title="Mouse Click",
-            description="To perform a mouse click use one hand and its index and middle fingers. In particular, you can perform the following features of the mouse:\nLeft click: bring your index and middle fingers closer together and move them apart.\nRight click: hold your index and middle fingers close together.\nDouble click: bring your index and middle fingers together and move them apart twice.",
+            description="To perform a mouse click use one hand and raise its index and middle fingers. In particular, you can perform the following features of the mouse:\nLeft click: bring your index and middle fingers closer together and move them apart.\nRight click: hold your index and middle fingers close together.\nDouble click: bring your index and middle fingers together and move them apart twice.",
             image="resources/assets/mouse_click.gif",
             on_continue_clicked=lambda: stacked_layout.setCurrentIndex(0),
             on_skip_clicked=lambda: stacked_layout.setCurrentIndex(0),
@@ -88,7 +88,7 @@ class MainWindow(QMainWindow):
         if onboarding:
             # Set onboard flag to true
             self.settings.setValue("onboard", True)
-            stacked_layout.currentIndex(1)
+            stacked_layout.setCurrentIndex(1)
 
         layout.addLayout(stacked_layout)
 
