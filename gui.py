@@ -135,19 +135,7 @@ class MainWindow(QMainWindow):
 if __name__ == "__main__":
     app = QApplication([])
     window = MainWindow()
-
-    # print(settings.fileName())
-    # window.setGeometry(100, 100, 500, 500)  # Set the window's geometry
     window.setWindowTitle("Vmouse")  # Set the window's title
     window.setWindowIcon(QIcon("resources/assets/logo.png"))
-
-    # # Create a label widget
-    # label = QLabel("Hello World", window)
-    # label.move(200, 200)
-
-    # # Create a push button widget
-    # button = QPushButton("Click Me!", window)
-    # button.move(200, 250)
-
     window.show()  # Show the window
     app.exec_()
