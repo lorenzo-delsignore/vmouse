@@ -31,7 +31,7 @@ class WelcomeScreen(QWidget):
         logo_label.setAlignment(Qt.AlignCenter)
 
         # Add Welcome Message
-        welcome_label = QLabel("Hey! Welcome", self)
+        welcome_label = QLabel("Vmouse\nHey! Welcome", self)
         welcome_label.setAlignment(Qt.AlignCenter)
 
         # Add Description
